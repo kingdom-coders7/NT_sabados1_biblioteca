@@ -29,3 +29,4 @@ def simular_usuarios(numeroUsuarios):
     return usuarios
 # Simular 10 usuarios
 usuarios_simulados = simular_usuarios(10)
+
