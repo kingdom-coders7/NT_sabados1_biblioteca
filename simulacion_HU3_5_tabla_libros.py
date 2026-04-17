@@ -24,5 +24,23 @@ def simular_libros(numLibros):
             "id_gender":random.randint(1, 12),
             "id_stand":random.randint(0,3)
         }
+
+        #Inyectando errores controlados
+        probabilidadError = random.random()
+        if probabilidadError < 0.1:
+            book["id_books"] = random.choice([None, 0,1])
+            book["title"] = " " + book["title"] + " "
+        elif probabilidadError < 0.25:
+            book["author"] = None
+        elif probabilidadError < 0.4:
+            book["id_books"] = book["id_books"].lower()
+            book["pages"] = random.choice([-1, -10])
+            book["id_stand"] = None 
+            book["id_gender"] = None
+        elif probabilidadError < 0.7:
+            book["author"] = random.choice(["batman", "un humano", "??"])
+        elif probabilidadError < 0.9:
+            book["editor"] = random.choice(["colanta", "sony", "cocacola"])
         libros.append(book)
-        return libros
+        
+    return libros
