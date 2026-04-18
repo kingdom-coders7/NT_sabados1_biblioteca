@@ -25,6 +25,21 @@ def simular_usuarios(numeroUsuarios):
             "email": fake.email(),
             "fecha_registro": fake.date_between(start_date='-2y', end_date='today')
         }
+
+        # Inyectar errores controlados
+        probabilidad_error = random.random()
+        if probabilidad_error < 0.1:  # 10% de probabilidad de generar un error
+            usuario["email"] = "correo_invalido"
+            usuario["id_users"] =random.choice(100,-100,"45")   # Correo no válido
+        elif probabilidad_error < 0.2:  # 20% de probabilidad de generar otro error
+            usuario["movil"] = "telefono_invalido"
+            usuario["name"] =random.choice(1,100,"45")   # Teléfono no válido
+        elif probabilidad_error < 0.3:
+            usuario["last_name"] =usuario["last_name"].lower()
+            usuario["id_users"]=None  
+        elif probabilidad_error < 0.6:
+            usuario["fecha_registro"] = None         
+       
         usuarios.append(usuario)
     return usuarios
 # Simular 10 usuarios
