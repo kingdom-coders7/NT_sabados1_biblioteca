@@ -2,6 +2,7 @@
 from datetime import datetime,timedelta #libreria para manejar fechas y horas
 from faker import Faker #libreria para generar datos falsos como nombres, correos, fechas, etc. 
 import random #libreria para generar numeros aleatorios 
+
 def simular_prestamos(numeroPrestamos):
     fake = Faker()
     prestamos = []
@@ -18,16 +19,15 @@ def simular_prestamos(numeroPrestamos):
         probabilidad_error = random.random()
         if probabilidad_error < 0.1:  # 10% de probabilidad de generar un error
             prestamo["id_users"] = None  # ID de usuario no válido
-            prestamo["id_libro"] = prestamo["id_libro"].lower()  # ID de libro no válido
+            prestamo["id_libro"] = "invalid"  # ID de libro no válido (cambiar a string inválido)
         elif probabilidad_error < 0.2:  # 20% de probabilidad de generar otro error
             prestamo["fecha_prestamo"] = None  # Fecha de préstamo no válida
         elif probabilidad_error < 0.3:
             prestamo["fecha_devolucion"] = None
-            prestamo["id_prestamo"] = random.choice([None, -1, 0])  # Fecha de devolución no válida
+            prestamo["id_prestamo"] = random.choice([None, -1, 0])  # ID de préstamo no válido
         elif probabilidad_error < 0.6:
             prestamo["id_libro"] = None 
-            prestamo["id_prestamo"] = prestamo["id_prestamo"]="texto "," ";"@" 
-            # ID de libro no válido    
+            prestamo["id_prestamo"] = "texto @ ;"  # ID de préstamo no válido    
         prestamos.append(prestamo)
     return prestamos
 
