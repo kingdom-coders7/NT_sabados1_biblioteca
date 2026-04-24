@@ -10,6 +10,7 @@ from simulacion_HU3_2Tablaprestamos import simular_prestamos
 
 
 
+
 simulaciones = simular_stands(1)
 # print(simulaciones)
 
