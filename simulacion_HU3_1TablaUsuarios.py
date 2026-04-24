@@ -8,18 +8,18 @@ import random #libreria para generar numeros aleatorios
 def simular_usuarios(numeroUsuarios):
 
     #semilla de datos para generar los mismos resultados cada vez que se ejecute el codigo
-    listaUsuarios = ["Juan Perez", "Maria Gomez", 
-                     "Carlos Sanchez", "Ana Rodriguez", "Luis Fernandez",]
+    # listaUsuarios = ["Juan Perez", "Maria Gomez", 
+                    #  "Carlos Sanchez", "Ana Rodriguez", "Luis Fernandez",]
     
-    listaCedulas = ["12345678", "87654321", "11223344", "44332211", "55667788"] 
+    # listaCedulas = ["12345678", "87654321", "11223344", "44332211", "55667788"] 
     fechaInicial= datetime.now() - timedelta(days=365*2) #fecha de hace 2 años
 
     fake = Faker()
     usuarios = []
     for _ in range(numeroUsuarios):
         usuario = {
-            "id_users": random.choice(listaCedulas), # Asignar una cédula de la lista
-            "name":random.choice(listaUsuarios),
+            "id_users": fake.unique.random_number(digits=8), # Asignar números de cedula de forma aleatoria y única 
+            "name": fake.first_name(),
             "last_name": fake.last_name(),
             "movil": fake.phone_number(),
             "email": fake.email(),
@@ -30,10 +30,10 @@ def simular_usuarios(numeroUsuarios):
         probabilidad_error = random.random()
         if probabilidad_error < 0.1:  # 10% de probabilidad de generar un error
             usuario["email"] = "correo_invalido"
-            usuario["id_users"] =random.choice(100,-100,"45")   # Correo no válido
+            usuario["id_users"] =random.choice([100,-100,"45"])   # Correo no válido
         elif probabilidad_error < 0.2:  # 20% de probabilidad de generar otro error
             usuario["movil"] = "telefono_invalido"
-            usuario["name"] =random.choice(1,100,"45")   # Teléfono no válido
+            usuario["name"] =random.choice([1,100,"45"])   # Teléfono no válido
         elif probabilidad_error < 0.3:
             usuario["last_name"] =usuario["last_name"].lower()
             usuario["id_users"]=None  
@@ -43,5 +43,5 @@ def simular_usuarios(numeroUsuarios):
         usuarios.append(usuario)
     return usuarios
 # Simular 10 usuarios
-usuarios_simulados = simular_usuarios(10)
+# usuarios_simulados = simular_usuarios(10)
 
