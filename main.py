@@ -19,7 +19,9 @@ from notebook.limpieza_tabla_stand import limpiar_tabla_stand
 #simulaciones_limpias = limpiar_tabla_libros(simulaciones_ordenadas)
 #print(simulaciones_limpias)
 
-#simulacionUsuarios=simular_usuarios(3) 
+
+simulaciones = simular_stands(1)
+# print(simulaciones)
 
 #simulacionPrestamos=simular_prestamos(3)
 

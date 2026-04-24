@@ -11,6 +11,7 @@ def simular_prestamos(numeroPrestamos):
             "id_prestamo": random.randint(1, 1000),
             "id_users": random.randint(1, 1000), # Asumiendo que los IDs de usuarios van del 1 al 1000
             "id_libro": random.randint(1, 500), # Asumiendo que los IDs de libros van del 1 al 500
+            "nameBook": fake.sentence(nb_words=3), # Generar un título de libro falso con 3 palabras
             "fecha_prestamo": fake.date_between(start_date='-1y', end_date='today'),
             "fecha_devolucion": fake.date_between(start_date='today', end_date='+30d')
         }
