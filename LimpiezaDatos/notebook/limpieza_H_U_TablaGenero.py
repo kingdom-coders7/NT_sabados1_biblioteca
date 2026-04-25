@@ -7,9 +7,8 @@ def limpiar_tabla_genero(setDatosSucios):
     columnas_texto = ["id_gender", "name"]
     for columna in columnas_texto:
         LimpiezaTablaGenero[columna] = LimpiezaTablaGenero[columna].astype("string").str.strip() # Eliminar espacios en blanco al inicio y al final
-        LimpiezaTablaGenero[columna] = LimpiezaTablaGenero[columna].str.lower() # Convertir a minúsculas para estandarizar
-    
-    valores_esperados = ["Literatura","Terror","Ficción","Historia","Novelas"]
+        
+    valores_esperados = ["literatura","terror","ficción","historia","novelas"]
     LimpiezaTablaGenero["id_gender"] = LimpiezaTablaGenero["id_gender"].where(
         LimpiezaTablaGenero["id_gender"].isin(valores_esperados),
         pd.NA

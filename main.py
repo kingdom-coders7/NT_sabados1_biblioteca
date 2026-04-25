@@ -3,8 +3,10 @@ import pandas as pd
 #from simulacion_HU3_5_tabla_libros import simular_libros
 #from simulacion_HU3_6_tabla_stand import simular_stands
 #from notebook.limpieza_tabla_stand import limpiar_tabla_stand
-from simulacion_H3_4Tabla_Genero import simular_Gender
-from LimpiezaDatos.limpieza_H_U_TablaGenero import limpiar_tabla_genero
+from utils.simulacion_H3_4Tabla_Genero import simular_Gender
+from notebook.limpiezaH_U_TablaReservaciones import limpiar_tabla_reservaciones
+from notebook.limpieza_H_U_TablaGenero import limpiar_tabla_genero
+
 
 #IMPORTAR DATOS H3_1 TABLAUSUARIOS
 #from simulacion_HU3_1TablaUsuarios import simular_usuarios
