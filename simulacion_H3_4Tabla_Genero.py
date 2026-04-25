@@ -1,23 +1,27 @@
-from datetime import datetime, timedelta
 import random
 
 def simular_Gender(numeroGeneros):
     
     #Semilla de datos
+    listaId=["av", "tr", "fc", "dr"]
     listaGender=["Literatura","Terror","Ficción","Historia","Novelas"]
 
     
-    
-    fechaInicial=datetime(2026,1,1)
 
-    gender=[]
+    genders=[]
 
     for _ in range(numeroGeneros):
-        fechaSimulada=fechaInicial+timedelta(days=random.randint(0,60))
-        employee={
-            "id_gender":random.randint(0,5000),
-            "name":random.choice(listaGender),
-            
+        gender={
+            "id_gender":random.choice(listaId),
+            "name":random.choice(listaGender),    
         }
-        gender.append(gender)
-    return gender
+
+        #Inyectando errores controlados
+        probabilidadError = random.random()
+        if probabilidadError < 0.25:
+            gender["id_gender"] = None
+        elif probabilidadError < 0.3:
+            gender["name"] = random.choice(["Peliculas", "Caballos"])
+        genders.append(gender)
+    
+    return genders
