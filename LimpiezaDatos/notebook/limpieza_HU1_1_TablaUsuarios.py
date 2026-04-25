@@ -16,7 +16,8 @@ def limpiar_tabla_usuarios(setDatosSucios):
         'last_name': setDatosSucios['last_name'].dropna().str.title(), # Obtener los valores únicos no nulos de la columna last_name, con la primera letra en mayúscula
         'email': setDatosSucios['email'].dropna().unique(),
         'movil': setDatosSucios['movil'].dropna().unique(),
-        'fecha_registro': setDatosSucios['fecha_registro'].dropna().unique()
+        'fecha_registro': setDatosSucios['fecha_registro'].dropna().unique(),
+        "ciudad": setDatosSucios['ciudad'].dropna().str.title()
     }
 
 # Reemplazar valores NaN por 000 en la columna id_users

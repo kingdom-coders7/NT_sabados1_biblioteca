@@ -3,8 +3,15 @@ from notebook.limpieza_tabla_libros import limpiar_tabla_libros
 from utils.simulacion_HU3_5_tabla_libros import simular_libros
 #from utils.simulacion_HU3_6_tabla_stand import simular_stands
 #from notebook.limpieza_tabla_stand import limpiar_tabla_stand
+<<<<<<< HEAD
 #from utils.simulacion_H3_4Tabla_Genero import simular_Gender
 #from notebook.limpieza_H_U_TablaGenero import limpiar_tabla_genero
+=======
+from utils.simulacion_H3_4Tabla_Genero import simular_Gender
+from notebook.limpiezaH_U_TablaReservaciones import limpiar_tabla_reservaciones
+from notebook.limpieza_H_U_TablaGenero import limpiar_tabla_genero
+
+>>>>>>> 0fd6aa7d6d4f341e3e5f3ce69210e3eeee55f5f8
 
 #IMPORTAR DATOS H3_1 TABLAUSUARIOS
 #from simulacion_HU3_1TablaUsuarios import simular_usuarios
@@ -51,6 +58,8 @@ describir_libros(simulaciones_limpias)
 #from notebook.descripcion_tabla_stand import describir_stand # noqa: E402
 
 #describir_stand(simulaciones_limpias)
+
+
 
 
 

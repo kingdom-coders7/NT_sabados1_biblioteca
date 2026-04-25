@@ -23,8 +23,7 @@ def simular_usuarios(numeroUsuarios):
             "last_name": fake.last_name(),
             "movil": fake.phone_number(),
             "email": fake.email(),
-            "fecha_registro": fake.date_between(start_date='-2y', end_date='today'),
-            "ciudad": fake.city(),
+            "fecha_registro": fake.date_between(start_date='-2y', end_date='today')
         }
 
         # Inyectar errores controlados
