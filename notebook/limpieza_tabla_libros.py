@@ -21,9 +21,15 @@ def limpiar_tabla_libros(data_frame_sucio):
         pd.NA
     )
 
-    editorial_valida = ["SBN123", "SBN001", "SBN423", "SBN879", "SBN400"]
+    id_valida = ["SBN123", "SBN001", "SBN423", "SBN879", "SBN400"]
     data_frame_limpio["id_books"] = data_frame_limpio["id_books"].where(
-        data_frame_limpio["id_books"].isin(editorial_valida),
+        data_frame_limpio["id_books"].isin(id_valida),
+        pd.NA
+    )
+
+    libros_validos = ["Codigo limpio", "Fundamentos de programación en C#", "Python 3", "Javascript en un fin de semana", "C++ practico"]
+    data_frame_limpio["title"] = data_frame_limpio["title"].where(
+        data_frame_limpio["title"].isin(libros_validos),
         pd.NA
     )
 
