@@ -1,8 +1,10 @@
 import pandas as pd
 #from notebook.limpieza_tabla_libros import limpiar_tabla_libros
 #from simulacion_HU3_5_tabla_libros import simular_libros
-from simulacion_HU3_6_tabla_stand import simular_stands
-from notebook.limpieza_tabla_stand import limpiar_tabla_stand
+#from simulacion_HU3_6_tabla_stand import simular_stands
+#from notebook.limpieza_tabla_stand import limpiar_tabla_stand
+from simulacion_H3_4Tabla_Genero import simular_Gender
+from LimpiezaDatos.limpieza_H_U_TablaGenero import limpiar_tabla_genero
 
 #IMPORTAR DATOS H3_1 TABLAUSUARIOS
 #from simulacion_HU3_1TablaUsuarios import simular_usuarios
@@ -20,15 +22,23 @@ from notebook.limpieza_tabla_stand import limpiar_tabla_stand
 #print(simulaciones_limpias)
 
 
-simulaciones = simular_stands(1)
-# print(simulaciones)
+#simulaciones = simular_stands(30)
+#print(simulaciones)
 
 #simulacionPrestamos=simular_prestamos(3)
 
 #print(simulacionPrestamos) #Ecsribir la simulacion requerida
 
-simulacion_stands = simular_stands(200)
-simulaciones_ordenadas = pd.DataFrame(simulacion_stands)
-simulaciones_limpias = limpiar_tabla_stand(simulaciones_ordenadas)
+#simulacion_stands = simular_stands(200)
+#simulaciones_ordenadas = pd.DataFrame(simulacion_stands)
+#simulaciones_limpias = limpiar_tabla_stand(simulaciones_ordenadas)
+#print(simulaciones_limpias)
+
+#gender_simulado = simular_Gender(30)
+#print(gender_simulado)
+
+simular_genero = simular_Gender(200)
+simulaciones_ordenadas = pd.DataFrame(simular_genero)
+simulaciones_limpias = limpiar_tabla_genero(simulaciones_ordenadas)
 print(simulaciones_limpias)
 
