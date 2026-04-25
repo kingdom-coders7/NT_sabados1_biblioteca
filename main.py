@@ -42,3 +42,5 @@ simulaciones_ordenadas = pd.DataFrame(simular_genero)
 simulaciones_limpias = limpiar_tabla_genero(simulaciones_ordenadas)
 print(simulaciones_limpias)
 
+
+
