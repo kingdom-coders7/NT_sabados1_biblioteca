@@ -35,18 +35,18 @@ def simular_reserva(numeroReservas):
         
         # Inyectar errores controlados
         probabilidad_error = random.random()
-        if probabilidad_error < 0.1:  # 10% de probabilidad de generar un error
-            reservation["id_reservation"] = None  # ID de usuario no válido
-            reservation["id_book"] = "invalid"  # ID de libro no válido (cambiar a string inválido)
-        elif probabilidad_error < 0.2:  # 20% de probabilidad de generar otro error
-            reservation["nombre"] = None  # Fecha de préstamo no válida
+        if probabilidad_error < 0.1:  
+            reservation["id_reservation"] = None 
+            reservation["id_book"] = None  
+        elif probabilidad_error < 0.2:  
+            reservation["nombre"] = None  
         elif probabilidad_error < 0.3:
             reservation["reservationDate"] = None
-            reservation["id_users"] = random.choice([None, -1, 0])  # ID de préstamo no válido
+            reservation["id_users"] = random.choice([None, -1, 0]) 
         elif probabilidad_error < 0.6:
             reservation["id_gender"] = "Error404"
-            reservation["expDate"] = "texto 1@1 ;"  # ID de préstamo no válido  
+            reservation["expDate"] = "texto 1@1 ;"  
             reservation["codigo"] = "Bad gate"
   
-        reservation.append(reservation)
-    return reservation
+        reservas.append(reservation)
+    return reservas

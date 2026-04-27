@@ -23,6 +23,6 @@ print(simulaciones_limpiasPrestamos)
 
 
 #describir los datos limpios de la tabla prestamos    
-from notebook.descripcionDatosHU1_TablaPrestamos import descripcion_datos_tabla_prestamos
+from LimpiezaDatos.notebook.descripcionDatosHU1_TablaPrestamos import descripcion_datos_tabla_prestamos  # noqa: E402
 descripcion_datos_tabla_prestamos(simulaciones_limpiasPrestamos)
 
