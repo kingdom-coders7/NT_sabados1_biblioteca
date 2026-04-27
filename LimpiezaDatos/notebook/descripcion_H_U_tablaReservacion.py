@@ -1,10 +1,10 @@
 import pandas as pd
 
-def describir_datos(data_frame_limpio):
+def describir_reserva(data_frame_limpio):
     print(f"Número de filas{data_frame_limpio.shape[0]}")
     print(f"Número de columnas{data_frame_limpio.shape[1]} ")
     print(f"Columnas disponibles{list(data_frame_limpio.columns)} ")
-    print(f"Estadísticas{data_frame_limpio[["id_reservation","codigo","id_book","nombre","reservationDate","expDate","id_gender","idUsers"]].describe()}")
+    print(f"Estadísticas{data_frame_limpio[["id_reservation","codigo","id_book","reservationDate","expDate","id_gender","id_users"]].describe()}")
     print(f"Valores cátegoricos{data_frame_limpio["codigo"].value_counts} ")
     print(f"Fecha mínima{data_frame_limpio["expDate"].min()}")
     print(f"Fecha máxima{data_frame_limpio["reservationDate"].max()}")

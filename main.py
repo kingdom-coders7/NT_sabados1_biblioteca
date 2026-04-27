@@ -1,17 +1,15 @@
 import pandas as pd
-from notebook.limpieza_tabla_libros import limpiar_tabla_libros
-from utils.simulacion_HU3_5_tabla_libros import simular_libros
+#from LimpiezaDatos.notebook.limpieza_tabla_libros import limpiar_tabla_libros
+#from utils.simulacion_HU3_5_tabla_libros import simular_libros
 #from utils.simulacion_HU3_6_tabla_stand import simular_stands
 #from notebook.limpieza_tabla_stand import limpiar_tabla_stand
-<<<<<<< HEAD
 #from utils.simulacion_H3_4Tabla_Genero import simular_Gender
-#from notebook.limpieza_H_U_TablaGenero import limpiar_tabla_genero
-=======
-from utils.simulacion_H3_4Tabla_Genero import simular_Gender
-from notebook.limpiezaH_U_TablaReservaciones import limpiar_tabla_reservaciones
-from notebook.limpieza_H_U_TablaGenero import limpiar_tabla_genero
+#from LimpiezaDatos.notebook.limpieza_H_U_TablaGenero import limpiar_tabla_genero
+from LimpiezaDatos.notebook.limpiezaH_U_TablaReservaciones import limpiar_tabla_reservaciones
+from utils.simulacion_HU3_3Tabla_Reservacion import simular_reserva
 
->>>>>>> 0fd6aa7d6d4f341e3e5f3ce69210e3eeee55f5f8
+
+
 
 #IMPORTAR DATOS H3_1 TABLAUSUARIOS
 #from simulacion_HU3_1TablaUsuarios import simular_usuarios
@@ -23,10 +21,10 @@ from notebook.limpieza_H_U_TablaGenero import limpiar_tabla_genero
 #simulaciones = simular_stands(1)
 # print(simulaciones)
 
-simulacion_libros = simular_libros(300)
-simulaciones_ordenadas = pd.DataFrame(simulacion_libros)
-simulaciones_limpias = limpiar_tabla_libros(simulaciones_ordenadas)
-print(simulaciones_limpias)
+#simulacion_libros = simular_libros(300)
+#simulaciones_ordenadas = pd.DataFrame(simulacion_libros)
+#simulaciones_limpias = limpiar_tabla_libros(simulaciones_ordenadas)
+#print(simulaciones_limpias)
 
 
 #simulaciones = simular_stands(30)
@@ -41,6 +39,16 @@ print(simulaciones_limpias)
 #simulaciones_limpias = limpiar_tabla_stand(simulaciones_ordenadas)
 #print(simulaciones_limpias)
 
+#simulacion reservas
+#simular_reserva = simular_reserva(25)
+#print(simular_reserva)
+
+#reserva limpia
+simulacion_reserva = simular_reserva(25)
+simulaciones_ordenadas = pd.DataFrame(simulacion_reserva)
+simulaciones_limpias = limpiar_tabla_reservaciones(simulaciones_ordenadas)
+print(simulaciones_limpias)
+
 #gender_simulado = simular_Gender(30)
 #print(gender_simulado)
 
@@ -50,16 +58,24 @@ print(simulaciones_limpias)
 #print(simulaciones_limpias)
 
 #importar descripcion de libros
-from notebook.descripcion_tabla_libros import describir_libros  # noqa: E402
+#from LimpiezaDatos.notebook.descripcion_tabla_libros import describir_libros  # noqa: E402
 
-describir_libros(simulaciones_limpias)
+#describir_libros(simulaciones_limpias)
 
 #importacion descripcion stands
 #from notebook.descripcion_tabla_stand import describir_stand # noqa: E402
 
 #describir_stand(simulaciones_limpias)
 
+#importacion descripcion genero
+#from LimpiezaDatos.notebook.descipcion_H_U_tablaGenero import describir_datos  # noqa: E402
 
+#describir_datos(simulaciones_limpias)
+
+#importacion descripción reservas
+from LimpiezaDatos.notebook.descripcion_H_U_tablaReservacion import describir_reserva # noqa: E402
+
+describir_reserva(simulaciones_limpias)
 
 
 

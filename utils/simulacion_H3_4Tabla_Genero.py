@@ -3,7 +3,7 @@ import random
 def simular_Gender(numeroGeneros):
     
     #Semilla de datos
-    listaId=["av", "tr", "fc", "dr"]
+    listaId=["lt", "tr", "fc", "dr", "nv"]
     listaGender=["Literatura","Terror","Ficción","Historia","Novelas"]
 
     
