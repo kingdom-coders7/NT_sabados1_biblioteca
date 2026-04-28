@@ -9,13 +9,13 @@ def limpiar_tabla_genero(setDatosSucios):
         LimpiezaTablaGenero[columna] = LimpiezaTablaGenero[columna].astype("string").str.strip() # Eliminar espacios en blanco al inicio y al final
         LimpiezaTablaGenero[columna] = LimpiezaTablaGenero[columna].str.lower() # Convertir a minúsculas para estandarizar
     
-    valores_esperados = ["Literatura","Terror","Ficción","Historia","Novelas"]
+    valores_esperados = ["av", "tr", "fc", "dr"]
     LimpiezaTablaGenero["id_gender"] = LimpiezaTablaGenero["id_gender"].where(
         LimpiezaTablaGenero["id_gender"].isin(valores_esperados),
         pd.NA
     )
 
-    indicador_esperado = ["av", "tr", "fc", "dr"]
+    indicador_esperado = ["literatura","terror","ficción","historia","novelas"]
     LimpiezaTablaGenero["name"] = LimpiezaTablaGenero["name"].where(
         LimpiezaTablaGenero["name"].isin(indicador_esperado),
         pd.NA
