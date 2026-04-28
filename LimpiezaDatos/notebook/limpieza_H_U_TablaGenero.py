@@ -7,17 +7,25 @@ def limpiar_tabla_genero(setDatosSucios):
     columnas_texto = ["id_gender", "name"]
     for columna in columnas_texto:
         LimpiezaTablaGenero[columna] = LimpiezaTablaGenero[columna].astype("string").str.strip() # Eliminar espacios en blanco al inicio y al final
-        LimpiezaTablaGenero[columna] = LimpiezaTablaGenero[columna].str.lower() # Convertir a minúsculas para estandarizar
     
+<<<<<<< HEAD
     valores_esperados = ["av", "tr", "fc", "dr"]
+=======
+    indicador_esperado = ["lt", "tr", "fc", "dr", "nv"]
+>>>>>>> f757320f58e587cf25747dcb5f871b348dcb0598
     LimpiezaTablaGenero["id_gender"] = LimpiezaTablaGenero["id_gender"].where(
-        LimpiezaTablaGenero["id_gender"].isin(valores_esperados),
+        LimpiezaTablaGenero["id_gender"].isin(indicador_esperado),
         pd.NA
     )
+<<<<<<< HEAD
 
     indicador_esperado = ["literatura","terror","ficción","historia","novelas"]
+=======
+        
+    valores_esperados = ["Literatura","Terror","Ficción","Historia","Novelas"]
+>>>>>>> f757320f58e587cf25747dcb5f871b348dcb0598
     LimpiezaTablaGenero["name"] = LimpiezaTablaGenero["name"].where(
-        LimpiezaTablaGenero["name"].isin(indicador_esperado),
+        LimpiezaTablaGenero["name"].isin(valores_esperados),
         pd.NA
     )
 
@@ -26,8 +34,5 @@ def limpiar_tabla_genero(setDatosSucios):
     columnas_obligatorias = ["id_gender", "name"]
     LimpiezaTablaGenero = LimpiezaTablaGenero.dropna(subset=columnas_obligatorias)
 
-    LimpiezaTablaGenero = LimpiezaTablaGenero.drop_duplicates()
-    
-   
     
     return LimpiezaTablaGenero
