@@ -28,6 +28,6 @@ print(simulaciones_limpias)
 
 
 #describir los datos limpios de la tabla usuarios
-from notebook.descripcionDatosHU1_TablaUsusarios import descripcion_datos_tabla_usuarios
+from notebook.descripcionDatosHU1_TablaUsusarios import descripcion_datos_tabla_usuarios # noqa: E402
 descripcion_datos_tabla_usuarios(simulaciones_limpias)
 

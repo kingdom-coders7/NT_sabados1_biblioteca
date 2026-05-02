@@ -3,10 +3,10 @@ import pandas as pd
 #from utils.simulacion_HU3_5_tabla_libros import simular_libros
 #from utils.simulacion_HU3_6_tabla_stand import simular_stands
 #from notebook.limpieza_tabla_stand import limpiar_tabla_stand
-#from utils.simulacion_H3_4Tabla_Genero import simular_Gender
-#from LimpiezaDatos.notebook.limpieza_H_U_TablaGenero import limpiar_tabla_genero
-from LimpiezaDatos.notebook.limpiezaH_U_TablaReservaciones import limpiar_tabla_reservaciones
-from utils.simulacion_HU3_3Tabla_Reservacion import simular_reserva
+from utils.simulacion_H3_4Tabla_Genero import simular_Gender
+from LimpiezaDatos.notebook.limpieza_H_U_TablaGenero import limpiar_tabla_genero
+#from LimpiezaDatos.notebook.limpiezaH_U_TablaReservaciones import limpiar_tabla_reservaciones
+#from utils.simulacion_HU3_3Tabla_Reservacion import simular_reserva
 
 
 
@@ -44,18 +44,18 @@ from utils.simulacion_HU3_3Tabla_Reservacion import simular_reserva
 #print(simular_reserva)
 
 #reserva limpia
-simulacion_reserva = simular_reserva(25)
-simulaciones_ordenadas = pd.DataFrame(simulacion_reserva)
-simulaciones_limpias = limpiar_tabla_reservaciones(simulaciones_ordenadas)
-print(simulaciones_limpias)
+#simulacion_reserva = simular_reserva(25)
+#simulaciones_ordenadas = pd.DataFrame(simulacion_reserva)
+#simulaciones_limpias = limpiar_tabla_reservaciones(simulaciones_ordenadas)
+#print(simulaciones_limpias)
 
 #gender_simulado = simular_Gender(30)
 #print(gender_simulado)
 
-#simular_genero = simular_Gender(30)
-#simulaciones_ordenadas = pd.DataFrame(simular_genero)
-#simulaciones_limpias = limpiar_tabla_genero(simulaciones_ordenadas)
-#print(simulaciones_limpias)
+simular_genero = simular_Gender(30)
+simulaciones_ordenadas = pd.DataFrame(simular_genero)
+simulaciones_limpias = limpiar_tabla_genero(simulaciones_ordenadas)
+print(simulaciones_limpias)
 
 #importar descripcion de libros
 #from LimpiezaDatos.notebook.descripcion_tabla_libros import describir_libros  # noqa: E402
@@ -68,14 +68,14 @@ print(simulaciones_limpias)
 #describir_stand(simulaciones_limpias)
 
 #importacion descripcion genero
-#from LimpiezaDatos.notebook.descipcion_H_U_tablaGenero import describir_datos  # noqa: E402
+from LimpiezaDatos.notebook.descipcion_H_U_tablaGenero import describir_datos  # noqa: E402
 
-#describir_datos(simulaciones_limpias)
+describir_datos(simulaciones_limpias)
 
 #importacion descripción reservas
-from LimpiezaDatos.notebook.descripcion_H_U_tablaReservacion import describir_reserva # noqa: E402
+#from LimpiezaDatos.notebook.descripcion_H_U_tablaReservacion import describir_reserva # noqa: E402
 
-describir_reserva(simulaciones_limpias)
+#describir_reserva(simulaciones_limpias)
 
 
 

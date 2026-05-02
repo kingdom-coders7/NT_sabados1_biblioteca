@@ -1,5 +1,5 @@
 #simulacion de datos para tabla de prestamos para la HU3.2
-from datetime import datetime,timedelta #libreria para manejar fechas y horas
+from datetime import datetime, timedelta #libreria para manejar fechas y horas
 from faker import Faker #libreria para generar datos falsos como nombres, correos, fechas, etc. 
 import random #libreria para generar numeros aleatorios 
 
