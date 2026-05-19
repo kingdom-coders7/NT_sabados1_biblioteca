@@ -1,5 +1,5 @@
 #simulacion de datos de usuarios para la HU3.1  
-from datetime import datetime,timedelta #libreria para manejar fechas y hora
+#from datetime import datetime,timedelta #libreria para manejar fechas y hora
 #libreria para simular correos aleaotorios
 
 from faker import Faker #libreria para generar datos falsos como nombres, correos, fechas, etc. 
@@ -12,7 +12,7 @@ def simular_usuarios(numeroUsuarios):
                     #  "Carlos Sanchez", "Ana Rodriguez", "Luis Fernandez",]
     
     # listaCedulas = ["12345678", "87654321", "11223344", "44332211", "55667788"] 
-    fechaInicial= datetime.now() - timedelta(days=365*2) #fecha de hace 2 años
+    #fechaInicial= datetime.now() - timedelta(days=365*2) #fecha de hace 2 años
 
     fake = Faker()
     usuarios = []
