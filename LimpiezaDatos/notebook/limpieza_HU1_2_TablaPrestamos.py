@@ -11,7 +11,7 @@ def limpiar_tabla_prestamos(setDatosSucios):
     
     #Definir valores esperados para cada columna
     valores_esperados = {
-        'id_prestamo': setDatosSucios['id_prestamo'].dropna().unique(), # Obtener los valores únicos no nulos de la columna id_prestamo
+        'id_prestamo': setDatosSucios['id_prestamo'].dropna().unique(), #quitar espacios en blanco y obtener los valores únicos de la columna id_prestamo
         'id_users': setDatosSucios['id_users'].dropna().unique(), # Obtener los valores únicos no nulos de la columna id_users
         'id_libro': setDatosSucios['id_libro'].dropna().unique(),
         'nameBook': setDatosSucios['nameBook'].dropna().unique(), # Obtener los valores únicos no nulos de la columna nameBook

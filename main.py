@@ -9,6 +9,9 @@ from LimpiezaDatos.notebook.transformacion_stand import transformar_datos_stand,
 #from LimpiezaDatos.notebook.limpieza_H_U_TablaGenero import limpiar_tabla_genero
 #from LimpiezaDatos.notebook.limpiezaH_U_TablaReservaciones import limpiar_tabla_reservaciones
 #from utils.simulacion_HU3_3Tabla_Reservacion import simular_reserva
+from utils.simulacion_H3_4Tabla_Genero import simular_Gender
+from LimpiezaDatos.notebook.limpieza_H_U_TablaGenero import limpiar_tabla_genero
+
 
 
 
